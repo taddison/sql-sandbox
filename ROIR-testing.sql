@@ -28,3 +28,13 @@ select @timeTaken as time_taken_ms, i.avg_fragmentation_in_percent, i.page_count
 from sys.dm_db_index_physical_stats(db_id(),object_id('dbo.FactProductInventory'),1,null,'DETAILED') as i
 where i.index_level = 0;
 go
+
+/*
+RTM
+- ROIR ON - 22s duration, 50% fragmentation
+- ROIR OFF - 2s duration, 0% fragmentation
+
+CU12
+- ROIR ON - 2s duration, 0% fragmentation
+- ROIR OFF - 2s duration, 0% fragmentation
+*/
