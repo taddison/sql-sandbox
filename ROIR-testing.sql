@@ -3,7 +3,6 @@
 - This singular example seems to show it takes longer and fragments the index
   - TBD if this applies widely or not
 - Looks like it drives higher reads when resumable (much higher - millions vs. tens of thousands)
-- Have only tested on RTM so far, once I've got a decent sample onto CU12
 */
 
 use AdventureWorksDW2017
